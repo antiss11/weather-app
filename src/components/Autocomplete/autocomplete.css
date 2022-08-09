@@ -1,0 +1,44 @@
+@import "@fontsource/roboto";
+
+.geoapify-autocomplete-input {
+  padding: 1em 3em;
+  font-family: "Roboto";
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+}
+
+
+.geoapify-close-button {
+  display: none;
+}
+
+.geoapify-autocomplete-item .icon {
+  display: none;
+}
+
+.autocomplete {
+  font-family: "Roboto";
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.geoapify-autocomplete-items {
+  font-size: 1em;
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  margin-top: -13px;
+}
+
+.geoapify-autocomplete-item {
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+.geoapify-autocomplete-item:hover {
+  background-color: #EDCB96;
+}
