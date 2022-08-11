@@ -2,8 +2,8 @@ import React from "react";
 import { GeocoderAutocomplete } from "@geoapify/geocoder-autocomplete";
 import "./autocomplete.css";
 
-function autocomplete(API_KEY, root) {
-  const autocomplete = new GeocoderAutocomplete(root, API_KEY, {
+function autocomplete(GEOAPIFY_API_KEY, root) {
+  const autocomplete = new GeocoderAutocomplete(root, GEOAPIFY_API_KEY, {
     type: "city",
   });
 
