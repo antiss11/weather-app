@@ -17,6 +17,8 @@ import {
   WiNightSnow,
 } from "weather-icons-react";
 
+import React from "react";
+
 const weatherCodes = {
   0: "Clear sky",
   1: "Mainly clear",
@@ -66,44 +68,44 @@ function getFormattedForecast(forecastRawData) {
   );
 }
 
-function getIconByWeatherCode(weatherCode, isDay) {
+function getIconByWeatherCode({ weatherCode, isDay, iconSize }) {
   if (isDay) {
     switch (weatherCode) {
       case (0, 1):
-        return <WiDaySunny size={24} />;
+        return <WiDaySunny size={iconSize} />;
       case 2:
-        return <WiDayCloudy size={24} />;
+        return <WiDayCloudy size={iconSize} />;
       case 3:
-        return <WiDaySunnyOvercast size={24} />;
+        return <WiDaySunnyOvercast size={iconSize} />;
       case (45, 48):
-        return <WiDayFog size={24} />;
+        return <WiDayFog size={iconSize} />;
       case (51, 53, 55, 61, 63, 65, 66, 67):
-        return <WiDayRain size={24} />;
+        return <WiDayRain size={iconSize} />;
       case (71, 73, 75, 77):
-        return <WiDaySnow size={24} />;
+        return <WiDaySnow size={iconSize} />;
       case (80, 81, 82, 85, 86):
-        return <WiDayShowers size={24} />;
+        return <WiDayShowers size={iconSize} />;
       case (95, 95, 99):
-        return <WiDayThunderstorm size={24} />;
+        return <WiDayThunderstorm size={iconSize} />;
     }
   } else {
     switch (weatherCode) {
       case (0, 1):
-        return <WiNightClear size={24} />;
+        return <WiNightClear size={iconSize} />;
       case 2:
-        return <WiNightCloudy size={24} />;
+        return <WiNightCloudy size={iconSize} />;
       case 3:
-        return <WiNightAltCloudy size={24} />;
+        return <WiNightAltCloudy size={iconSize} />;
       case (45, 48):
-        return <WiNightFog size={24} />;
+        return <WiNightFog size={iconSize} />;
       case (51, 53, 55, 61, 63, 65, 66, 67):
-        return <WiNightRain size={24} />;
+        return <WiNightRain size={iconSize} />;
       case (71, 73, 75, 77):
-        return <WiNightSnow size={24} />;
+        return <WiNightSnow size={iconSize} />;
       case (80, 81, 82, 85, 86):
-        return <WiNightShowers size={24} />;
+        return <WiNightShowers size={iconSize} />;
       case (95, 95, 99):
-        return <WiNightThunderstorm size={24} />;
+        return <WiNightThunderstorm size={iconSize} />;
     }
   }
 }
