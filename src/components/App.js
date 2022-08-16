@@ -4,7 +4,7 @@ import autocomplete from "./Autocomplete/autocomplete";
 import { getFormattedForecast } from "../weather-analysis";
 import "./App.css";
 import DayForecast from "./DayForecast/DayForecast";
-import { createTheme, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const DAYS = [
   "Sunday",
@@ -89,12 +89,22 @@ class App extends React.Component {
     const days = Object.entries(this.state.forecast).map((dayInfo) => {
       let date = dayInfo[0];
       let forecast = dayInfo[1];
-      return <DayForecast name={getDayName(date)} forecast={forecast} />;
+      return (
+        <Grid item width={9 / 10}>
+          <DayForecast name={getDayName(date)} forecast={forecast} />
+        </Grid>
+      );
     });
     return (
       <div className="app">
-        <div className="autocomplete" ref={this.autocompleteFieldRef} />
-        {Object.keys(this.state.forecast).length > 0 && days}
+        <Grid container rowSpacing={3} direction="column" alignItems="center">
+          <Grid item direction="column" alignItems="center" width={9 / 10}>
+            <div className="autocomplete" ref={this.autocompleteFieldRef} />
+          </Grid>
+          <Grid item container alignItems="center" direction="column" rowSpacing={3}>
+            {Object.keys(this.state.forecast).length > 0 && days}
+          </Grid>
+        </Grid>
       </div>
     );
   }

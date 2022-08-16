@@ -1,7 +1,6 @@
 .app {
-  background-color: #9E7682;
+  background-color: #9e7682;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
   padding-top: 10vh;
+  min-height: 100vh;
 }
