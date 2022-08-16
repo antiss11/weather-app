@@ -68,9 +68,8 @@ function getFormattedForecast(forecastRawData) {
   );
 }
 
-function getIconByWeatherCode({ weatherCode, isDay, iconSize }) {
-  console.log(weatherCode);
-  if (isDay) {
+function getIconByWeatherCode({ weatherCode, isNight, iconSize }) {
+  if (!isNight) {
     switch (weatherCode) {
       case 0:
       case 1:
