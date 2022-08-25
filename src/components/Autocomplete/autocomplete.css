@@ -1,43 +1,38 @@
 @import "@fontsource/roboto";
 
-:root {
-  --sm: 600px;
-  --md: 900px;
-  --lg: 1200px;
+.autocomplete {
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: calc(100% - 64px);
 }
 
-@media (max-width: 600px) {
-  .autocomplete {
-    font-family: "Roboto";
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-  }
+.geoapify-autocomplete-input {
+  font-family: "Roboto";
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 1em 0.5em;
+  width: 100%;
+  padding-left: 24px;
+}
 
-  .geoapify-autocomplete-input {
-    font-family: "Roboto";
-    font-size: 1.2em;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 1em 0.5em;
-    width: 100%;
-  }
+.geoapify-autocomplete-items {
+  background-color: #ffffff;
+  outline: 1px solid #bb5d5d;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+}
 
-  .geoapify-autocomplete-items {
-    background-color: #ffffff;
-    outline: 1px solid #bb5d5d;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-
-  .geoapify-autocomplete-item {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0.5em 0.5em;
-  }
+.geoapify-autocomplete-item {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em 0.5em;
 }
 
 .geoapify-close-button {

@@ -98,7 +98,13 @@ class App extends React.Component {
 		});
 		return (
 			<div className="app">
-				<Grid container rowSpacing={3} direction="column" alignItems="center">
+				<Grid
+					container
+					rowSpacing={3}
+					direction="column"
+					alignItems="center"
+					sx={{ py: 5 }}
+				>
 					<Grid container item direction="column" alignItems="center">
 						<div className="autocomplete" ref={this.autocompleteFieldRef} />
 					</Grid>
